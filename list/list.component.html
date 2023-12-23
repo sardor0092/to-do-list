@@ -1,0 +1,44 @@
+<p>vazifalar</p>
+
+
+<div>
+
+    <button (click)="addTask()">vazifa qo'shish</button>
+
+
+</div>
+
+
+
+<div class="task" *ngFor="let task of taskList;let i=index">
+
+
+    <div>
+
+        <span class="title">vazifa raqami:</span> {{i+1}}
+
+        <span class="remove"> 
+
+            <button (click)="removeTask(i)">X</button>
+            
+        </span>
+    
+    </div>
+
+    <div>
+        <span class="title">Title</span>
+        <input [(ngModel)]="task.title" type="text">
+
+    </div>
+
+    <div>
+
+        <span class="title">Title</span>
+        <input [(ngModel)]="task.desc" type="text">
+
+    </div>
+
+
+</div>
+
+
